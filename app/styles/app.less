@@ -5,6 +5,7 @@ h1 {
 }
 .container {
   padding: 20px 40px;
+  width: auto;
 }
 form {
   background-color: #fff;
@@ -19,4 +20,41 @@ form {
     margin: 0;
     font-weight: normal;
   }
+}
+div.graph {
+  width: 100px;
+  overflow: hidden;
+  float: left;
+  margin: 0 20px 0 0;
+  height: 500px;
+  .title {
+    font-size: 12px;
+    text-align: center;
+    height: 50px;
+  }
+  .border {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 16px;
+    height: 300px;
+    margin: 0 auto;
+    .bar {
+      position: absolute;
+      bottom: 1px;
+      left: 1px;
+      right: 1px;
+      height: 150px;
+      background: blue;
+      border-radius: 3px;
+
+    }
+
+  }
+  .value {
+    font-size: 12px;
+    padding: 10px 0 0;
+    text-align: center;
+  }
+
 }

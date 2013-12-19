@@ -15,61 +15,61 @@
     <div class="form-group">
         <label for="input2" class="col-sm-4">Glykémie na lačno (mmol/l)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input2" placeholder="Glykémie na lačno">
+            {{input type="text" id="input2" value=model.glykemieNalacno class="form-control" placeholder="Glykémie na lačno"}}
         </div>
     </div>
     <div class="form-group">
         <label for="input3" class="col-sm-4">Glykovaný hemoglobin (HbA1c v %)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input3" placeholder="Glykovaný hemoglobin">
+            {{input type="text" id="input3" value=model.hba1c class="form-control" placeholder="Glykovaný hemoglobin"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input3" class="col-sm-4">Celkový cholesterol (mmol/l)</label>
+        <label for="input4" class="col-sm-4">Celkový cholesterol (mmol/l)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input3" placeholder="Celkový cholesterol">
+            {{input type="text" id="input4" value=model.cholesterolCelkem class="form-control" placeholder="Celkový cholesterol"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input4" class="col-sm-4">HDL cholesterol (mmol/l)</label>
+        <label for="input5" class="col-sm-4">HDL cholesterol (mmol/l)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input4" placeholder="HDL cholesterol">
+            {{input type="text" id="input5" value=model.cholesterolHdl class="form-control" placeholder="HDL cholesterol"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input5" class="col-sm-4">LDL cholesterol (mmol/l)</label>
+        <label for="input6" class="col-sm-4">LDL cholesterol (mmol/l)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input5" placeholder="LDL cholesterol">
+            {{input type="text" id="input6" value=model.cholesterolLdl class="form-control" placeholder="LDL cholesterol"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input6" class="col-sm-4">Triacylglyceroly (mmol/l)</label>
+        <label for="input7" class="col-sm-4">Triacylglyceroly (mmol/l)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input6" placeholder="Triacylglyceroly">
+            {{input type="text" id="input7" value=model.triacyglyceroly class="form-control" placeholder="Triacylglyceroly"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input7" class="col-sm-4">Váha (kg)</label>
+        <label for="input8" class="col-sm-4">Váha (kg)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input7" placeholder="Váha">
+            {{input type="text" id="input8" value=model.vaha class="form-control" placeholder="Váha"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input8" class="col-sm-4">Výška (cm)</label>
+        <label for="input9" class="col-sm-4">Výška (cm)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input8" placeholder="Výška">
+            {{input type="text" id="input9" value=model.vyska class="form-control" placeholder="Výška"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input9" class="col-sm-4">TK diastlický (mmHg)</label>
+        <label for="input10" class="col-sm-4">TK diastlický (mmHg)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input9" placeholder="TK diastlický">
+            {{input type="text" id="input10" value=model.tlakDiastolicky class="form-control" placeholder="TK diastlický"}}
         </div>
     </div>
     <div class="form-group">
-        <label for="input10" class="col-sm-4">TK systolický (mmHg)</label>
+        <label for="input11" class="col-sm-4">TK systolický (mmHg)</label>
         <div  class="col-sm-8">
-            <input type="password" class="form-control" id="input10" placeholder="TK systolický">
+            {{input type="text" id="input11" value=model.tlakSystolicky class="form-control" placeholder="TK systolický"}}
         </div>
     </div>
     <button class="btn btn-primary" {{action "goToGraph"}}>Zobrazit</button>

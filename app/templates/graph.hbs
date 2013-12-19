@@ -1,1 +1,75 @@
+<div class="graphs clearfix">
+    <div class="graph">
+        <p class="title">Glykémie na lačno (mmol/l)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="glykemieNalacnoStyle"}}></div>
+        </div>
+
+        <p class="value">{{glykemieNalacnoValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">HbA1c dle IFCC (%)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="hba1cStyle"}}></div>
+        </div>
+
+        <p class="value">{{hba1cValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">Celkový cholesterol (mmol/l)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="cholesterolCelkemStyle"}}></div>
+        </div>
+
+        <p class="value">{{cholesterolCelkemValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">HDL cholesterol (mmol/l)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="cholesterolHdlStyle"}}></div>
+        </div>
+
+        <p class="value">{{cholesterolHdlValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">LDL cholesterol (mmol/l)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="cholesterolLdlStyle"}}></div>
+        </div>
+
+        <p class="value">{{cholesterolLdlValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">Triacylglyceroly (mmol/l)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="triacyglycerolyStyle"}}></div>
+        </div>
+
+        <p class="value">{{triacyglycerolyValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">BMI</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="bmiStyle"}}></div>
+        </div>
+
+        <p class="value">{{bmiValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">Krevní tlak diastolický (mmHg)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="tlakDiastolickyStyle"}}></div>
+        </div>
+
+        <p class="value">{{tlakDiastolickyValue}}</p>
+    </div>
+    <div class="graph">
+        <p class="title">Krevní tlak systolický (mmHg)</p>
+        <div class="border">
+            <div class="bar" {{bind-attr style="tlakSystolickyStyle"}}></div>
+        </div>
+
+        <p class="value">{{tlakSystolickyValue}}</p>
+    </div>
+</div>
 {{#link-to "form"}}Zpět{{/link-to}}
