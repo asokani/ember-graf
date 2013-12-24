@@ -39,15 +39,45 @@ div.graph {
     width: 16px;
     height: 300px;
     margin: 0 auto;
+
+    .line, .number, .valid {
+      position:absolute;
+      left: 0px;
+      margin: 0;
+      padding:0;
+    }
+    .line {
+      border-top: 1px solid black;
+    }
+    .number {
+      height: 20px;
+      line-height: 20px;
+      width: 20px;
+      text-align: left;
+      font-size: 12px;
+      left: 26px;
+      bottom: 0;
+    }
     .bar {
       position: absolute;
       bottom: 1px;
       left: 1px;
       right: 1px;
-      height: 150px;
-      background: blue;
       border-radius: 3px;
-
+    }
+    .bar.bad {
+      background-color: #d9534f;
+    }
+    .bar.ok {
+      background-color: #5cb85c;
+    }
+    .valid {
+      width: 0;
+      left: -12px;
+      height: 0px;
+      border-top: 5px solid transparent;
+      border-left: 10px solid #5bc0de;
+      border-bottom: 5px solid transparent;
     }
 
   }
@@ -55,6 +85,8 @@ div.graph {
     font-size: 12px;
     padding: 10px 0 0;
     text-align: center;
+    font-weight: bold;
   }
+  
 
 }

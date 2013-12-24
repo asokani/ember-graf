@@ -1,4 +1,4 @@
-var information = {
+var information = Ember.Object.extend({
     glykemieNalacno: "",
     glykemiePoJidle: "",
     hba1c: "",
@@ -12,6 +12,6 @@ var information = {
     tlakSystolicky: "",
     vaha: "",
     vyska: ""
-};
+});
 
 export default information;

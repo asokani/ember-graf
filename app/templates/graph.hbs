@@ -1,75 +1,12 @@
-<div class="graphs clearfix">
-    <div class="graph">
-        <p class="title">Glykémie na lačno (mmol/l)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="glykemieNalacnoStyle"}}></div>
-        </div>
-
-        <p class="value">{{glykemieNalacnoValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">HbA1c dle IFCC (%)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="hba1cStyle"}}></div>
-        </div>
-
-        <p class="value">{{hba1cValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">Celkový cholesterol (mmol/l)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="cholesterolCelkemStyle"}}></div>
-        </div>
-
-        <p class="value">{{cholesterolCelkemValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">HDL cholesterol (mmol/l)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="cholesterolHdlStyle"}}></div>
-        </div>
-
-        <p class="value">{{cholesterolHdlValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">LDL cholesterol (mmol/l)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="cholesterolLdlStyle"}}></div>
-        </div>
-
-        <p class="value">{{cholesterolLdlValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">Triacylglyceroly (mmol/l)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="triacyglycerolyStyle"}}></div>
-        </div>
-
-        <p class="value">{{triacyglycerolyValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">BMI</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="bmiStyle"}}></div>
-        </div>
-
-        <p class="value">{{bmiValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">Krevní tlak diastolický (mmHg)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="tlakDiastolickyStyle"}}></div>
-        </div>
-
-        <p class="value">{{tlakDiastolickyValue}}</p>
-    </div>
-    <div class="graph">
-        <p class="title">Krevní tlak systolický (mmHg)</p>
-        <div class="border">
-            <div class="bar" {{bind-attr style="tlakSystolickyStyle"}}></div>
-        </div>
-
-        <p class="value">{{tlakSystolickyValue}}</p>
-    </div>
+<div class="graphs clearfix">  
+    {{vertical-meter title="Glykémie na lačno" unit="mmol/l" from="0" to="10" rangefrom="4" rangeto="6" value=model.glykemieNalacno}}  
+    {{vertical-meter title="HbA1c dle IFCC" unit="%" from="0" to="10" rangefrom="0" rangeto="4.5" value=model.hba1c}}  
+    {{vertical-meter title="Celkový cholesterol " unit="mmol/l" from="0" to="10" rangefrom="0" rangeto="4.5" value=model.cholesterolCelkem}}  
+    {{vertical-meter title="HDL cholesterol" unit="mmol/l" from="0" to="10" rangefrom="1.1" rangeto="10" value=model.cholesterolHdl}}  
+    {{vertical-meter title="LDL cholesterol" unit="mmol/l" from="0" to="10" rangefrom="0" rangeto="2.5" value=model.cholesterolLdl}}  
+    {{vertical-meter title="Triacylglyceroly" unit="mmol/l" from="0" to="10" rangefrom="0" rangeto="1.6" value=model.triacyglyceroly}}   
+    {{vertical-meter title="BMI" unit="" from="0" to="100" rangefrom="20" rangeto="40" value="30"}}  
+    {{vertical-meter title="Krevní tlak diastolický" unit="mmHg" from="0" to="200" rangefrom="0" rangeto="130" value=model.tlakDiastolicky}} 
+    {{vertical-meter title="Krevní tlak systolický" unit="mmHg" from="0" to="200" rangefrom="0" rangeto="80" value=model.tlakSystolicky}} 
 </div>
 {{#link-to "form"}}Zpět{{/link-to}}
