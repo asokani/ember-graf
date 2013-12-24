@@ -1,0 +1,49 @@
+<div class="modal fade" id="modal-access"> 
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Potvrzení vstupu</h4>
+      </div>
+      <div class="modal-body">
+      {{#if step1}}
+        <p>Vstupujete na stránky obsahující informace, 
+		které jsou určeny zdravotnickým odborníkům a nikoliv 
+		laické veřejnosti. Zaškrtnutím pole „Potvrzuji, 
+		že jsem odborníkem“ laskavě potvrďte, že jste 
+		zdravotnickým odborníkem, a že jste se seznámil/a 
+		s níže uvedenou definicí zdravotnického odborníka 
+		podle platných právních předpisů. Zdravotnickým 
+		odborníkem se rozumí osoba, která je oprávněná 
+		humánní léčivé přípravky předepisovat nebo 
+		vydávat (lékař, lékárník).</p>
+        <form role="form"> 
+		    <div>
+	            <div class="checkbox">
+	                {{input type="checkbox" id="input1" checked=isChecked}}
+	                <label for="input1">Potvrzuji, že jsem odborníkem</label>
+	            </div>
+	        </div>
+	    </form>
+	  {{else}}
+	  <p>Kliknutím na odkaz „Vstoupit“ berete na vědomí, 
+		že informace obsažené dále na těchto stránkách nejsou určeny 
+		laické veřejnosti, nýbrž zdravotnickým odborníkům, a to se 
+		všemi riziky a důsledky z toho plynoucími pro laickou veřejnost. 
+		Tato rizika zahrnují zejména možnost chybné interpretace 
+		informací dále uvedených, nesprávného úsudku ohledně vlastního 
+		zdravotního stavu či možnosti vzniku mylné preference ve 
+		vztahu k určitému humánnímu léčivému přípravku. Zároveň 
+		berete na vědomí, že o vhodnosti případné léčby určitým 
+		humánním léčivým přípravkem, jehož výdej je vázán na 
+		lékařský předpis, rozhoduje Váš lékař ve spolupráci s 
+		Vámi, a o vhodnosti léčby humánním léčivým přípravkem, 
+		jehož výdej není vázán na lékařský předpis, byste se 
+		vždy měl/a poradit s vaším lékařem či lékárníkem.</p>
+	  {{/if}}
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" {{action "continue"}}>{{buttonText}}</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -30,7 +30,11 @@ export default Ember.Component.extend({
 
     element = $("<div class='bar'></div>");
     this.$(".border").append(element);
-    element.css("height", this.numberToPosition(value));
+    var height = this.numberToPosition(value);
+	if (height > this.$(".border").height()-2) {
+      height = this.$(".border").height()-2;
+	}
+    element.css("height", height);
 
     if (value >= this.rangefrom && value <= this.rangeto) {
       element.addClass("ok");

@@ -3,6 +3,8 @@ var FormController = Ember.Controller.extend({
         goToGraph: function () {
             this.transitionToRoute("graph");
         }
+    },
+    init: function() {
     }
 
 });

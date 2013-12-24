@@ -3,7 +3,7 @@
 // For more details: http://stefanpenner.github.io/ember-app-kit/guides/using-modules.html
 
 export default Ember.Handlebars.makeBoundHelper(function(word) {
-  if (word != "") {
+  if (word !== "") {
 		return "(" + word + ")";
 	}
 });
