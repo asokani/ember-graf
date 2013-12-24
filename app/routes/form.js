@@ -1,4 +1,5 @@
 import information from 'appkit/models/information';
+/* global Cookies */
 
 export default Ember.Route.extend({
   model: function() {
@@ -10,11 +11,13 @@ export default Ember.Route.extend({
     }
   },
   activate: function() {
-    this.render("modal-access", {
-        into: 'application',
-        outlet: 'modal'
-    });
-    Ember.run.next(this, this.animateModalOpen);
+    if (Cookies.get('isMedic') !== "true") {
+      this.render("modal-access", {
+          into: 'application',
+          outlet: 'modal'
+      });
+      Ember.run.next(this, this.animateModalOpen);
+    }
   },
   animateModalOpen: function() {
     $('#modal-access').modal({

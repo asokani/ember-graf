@@ -42,7 +42,7 @@
 	  {{/if}}
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" {{action "continue"}}>{{buttonText}}</button>
+        <button type="button" class="btn btn-primary" {{action "continue"}} {{bind-attr disabled=isButtonDisabled}}>{{buttonText}}</button>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
