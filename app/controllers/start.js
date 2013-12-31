@@ -1,4 +1,4 @@
-var GraphController = Ember.Controller.extend({
+var StartController = Ember.Controller.extend({
     actions: {
         goToForm: function () {
             this.transitionToRoute("form");
@@ -6,4 +6,4 @@ var GraphController = Ember.Controller.extend({
     }
 });
 
-export default GraphController;
+export default StartController;

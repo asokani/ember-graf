@@ -5,8 +5,8 @@ var ModalAccessController = Ember.Controller.extend({
     buttonText: "Pokračovat",
     isButtonDisabled: true,
     isChecked: false,
-    blah: Ember.observer('isChecked', function() {
-      this.set("isButtonDisabled", !this.get("isChecked"));	
+    updateButtonState: Ember.observer('isChecked', function() {
+      this.set("isButtonDisabled", !this.get("isChecked"));
     }),
     actions: {
         continue: function() {

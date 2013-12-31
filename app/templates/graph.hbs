@@ -5,8 +5,9 @@
     {{vertical-meter title="HDL cholesterol" unit="mmol/l" from="0" to="10" rangefrom="1.1" rangeto="10" value=model.cholesterolHdl}}  
     {{vertical-meter title="LDL cholesterol" unit="mmol/l" from="0" to="10" rangefrom="0" rangeto="2.5" value=model.cholesterolLdl}}  
     {{vertical-meter title="Triacylglyceroly" unit="mmol/l" from="0" to="10" rangefrom="0" rangeto="1.6" value=model.triacyglyceroly}}   
-    {{vertical-meter title="BMI" unit="" from="0" to="100" rangefrom="20" rangeto="40" value=model.bmi}}  
+    {{vertical-meter title="BMI" unit="" from="0" to="100" rangefrom=model.bmiFrom rangeto=model.bmiTo value=model
+    .bmi}}
     {{vertical-meter title="Krevní tlak diastolický" unit="mmHg" from="0" to="200" rangefrom="0" rangeto="130" value=model.tlakDiastolicky}} 
     {{vertical-meter title="Krevní tlak systolický" unit="mmHg" from="0" to="200" rangefrom="0" rangeto="80" value=model.tlakSystolicky}} 
 </div>
-{{#link-to "form"}}Zpět{{/link-to}}
+<p style="padding-top:30px;"><button {{action "goToForm"}}>Zpět</button></p>

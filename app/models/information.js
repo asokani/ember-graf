@@ -11,6 +11,7 @@ var Information = Ember.Object.extend({
     tlakSystolicky: "",
     vaha: "",
     vyska: "",
+    checkedRadio: "man",
     bmi: function(key, value) {
       var vaha = this.get("vaha");
       var vyska = this.get("vyska");
@@ -22,7 +23,24 @@ var Information = Ember.Object.extend({
       var result = vaha/(vyska*vyska);
       result = Math.round(result*10)/10;
       return String(result);
-    }.property('vaha', 'vyska')
+    }.property('vaha', 'vyska'),
+    bmiFrom: function(key, value) {
+        var radio = this.get("checkedRadio");
+        if (radio === "man") {
+            return "21";
+        } else {
+            return "20";
+        }
+    }.property('checkedRadio'),
+    bmiTo: function(key, value) {
+        var radio = this.get("checkedRadio");
+        if (radio === "man") {
+            return "25"
+        } else {
+            return "24";
+        }
+    }.property('checkedRadio')
+
 });
 
 var information = Information.create();

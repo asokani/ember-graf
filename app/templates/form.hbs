@@ -3,11 +3,11 @@
         <label class="col-sm-4">Pohlaví</label>
         <div  class="col-sm-8">
             <div class="radio-inline">
-                <input type="radio" name="input1" id="input1_1" value="m" checked>
+                {{radio-button value="text" selection=model.checkedRadio value="man" name="input1" id="input1_1"}}
                 <label for="input1_1">muž</label>
             </div>
             <div class="radio-inline">
-                <input type="radio" name="input1" id="input1_2" value="z">
+                {{radio-button value="text" selection=model.checkedRadio value="woman" name="input1" id="input1_2"}}
                 <label for="input1_2">žena</label>
             </div>
         </div>
