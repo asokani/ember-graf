@@ -35,7 +35,7 @@ var Information = Ember.Object.extend({
     bmiTo: function(key, value) {
         var radio = this.get("checkedRadio");
         if (radio === "man") {
-            return "25"
+            return "25";
         } else {
             return "24";
         }

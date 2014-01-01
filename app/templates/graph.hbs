@@ -1,4 +1,4 @@
-<div class="graphs clearfix">  
+<div class="graphs clearfix">
     {{vertical-meter title="Glykémie na lačno" unit="mmol/l" from="0" to="10" rangefrom="4" rangeto="6" value=model.glykemieNalacno}}  
     {{vertical-meter title="HbA1c dle IFCC" unit="%" from="0" to="10" rangefrom="0" rangeto="4.5" value=model.hba1c}}  
     {{vertical-meter title="Celkový cholesterol " unit="mmol/l" from="0" to="10" rangefrom="0" rangeto="4.5" value=model.cholesterolCelkem}}  
@@ -10,4 +10,20 @@
     {{vertical-meter title="Krevní tlak diastolický" unit="mmHg" from="0" to="200" rangefrom="0" rangeto="130" value=model.tlakDiastolicky}} 
     {{vertical-meter title="Krevní tlak systolický" unit="mmHg" from="0" to="200" rangefrom="0" rangeto="80" value=model.tlakSystolicky}} 
 </div>
-<p style="padding-top:30px;"><button {{action "goToForm"}}>Zpět</button></p>
+<p>
+    <button {{action "goToForm"}}>Zpět</button>
+    <button {{action "exportPDF"}}>PDF pro tisk</button>
+</p>
+<form action="http://localhost:3000/pdf" method="post" id="pdfexport">
+    <input type="hidden" name="glykemieNalacno" {{bind-attr value=model.glykemieNalacno}} />
+    <input type="hidden" name="bmiFrom" {{bind-attr value=model.bmiFrom}} />
+    <input type="hidden" name="bmiTo" {{bind-attr value=model.bmiTo}} />
+    <input type="hidden" name="hba1c" {{bind-attr value=model.hba1c}} />
+    <input type="hidden" name="cholesterolCelkem" {{bind-attr value=model.cholesterolCelkem}} />
+    <input type="hidden" name="cholesterolHdl" {{bind-attr value=model.cholesterolHdl}} />
+    <input type="hidden" name="cholesterolLdl" {{bind-attr value=model.cholesterolLdl}} />
+    <input type="hidden" name="triacyglyceroly" {{bind-attr value=model.triacyglyceroly}} />
+    <input type="hidden" name="bmi" {{bind-attr value=model.bmi}} />
+    <input type="hidden" name="tlakDiastolicky" {{bind-attr value=model.tlakDiastolicky}} />
+    <input type="hidden" name="tlakSystolicky" {{bind-attr value=model.tlakSystolicky}} />
+</form>
